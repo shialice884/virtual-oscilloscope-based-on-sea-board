@@ -1,0 +1,94 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sun Jul 26 22:45:22 2020
+| Host         : DESKTOP-E41K9EN running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file ADC_Demo_control_sets_placed.rpt
+| Design       : ADC_Demo
+| Device       : xc7s15
+-------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    24 |
+| Unused register locations in slices containing registers |    52 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            1 |
+|      2 |            1 |
+|      4 |            1 |
+|      8 |           10 |
+|     10 |            1 |
+|     12 |            3 |
+|    16+ |            7 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             139 |           41 |
+| No           | No                    | Yes                    |               7 |            3 |
+| No           | Yes                   | No                     |              74 |           26 |
+| Yes          | No                    | No                     |             104 |           29 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              80 |           34 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|               Clock Signal              |                                                                                                 Enable Signal                                                                                                 |                                                       Set/Reset Signal                                                      | Slice Load Count | Bel Load Count |
++-----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|  Signal_Pulse                           |                                                                                                                                                                                                               | Driver_ADC0/Freq_Cal0/Delta_Clear_Flag                                                                                      |                1 |              1 |
+|  clk_10/inst/clk_out1                   |                                                                                                                                                                                                               | rgb2dvi/U0/ClockGenInternal.ClockGenX/in0                                                                                   |                1 |              2 |
+|  clk_10/inst/clk_out1                   |                                                                                                                                                                                                               | rgb2dvi/U0/ClockGenInternal.ClockGenX/LockLostReset/SyncAsyncx/oSyncStages[1]                                               |                1 |              4 |
+|  clk_10/inst/clk_out1                   | Driver_ADC0/Sampling_38400_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_REGCEB_cooolgate_en_sig_11 | Driver_ADC0/Sampling_38400_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/psbram_and_n_7 |                3 |              8 |
+|  clk_10/inst/clk_out1                   | Driver_ADC0/Sampling_38400_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_REGCEB_cooolgate_en_sig_18 | Driver_ADC0/Sampling_38400_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/psbram_and_n   |                5 |              8 |
+|  clk_10/inst/clk_out1                   | Driver_ADC0/Sampling_38400_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_REGCEB_cooolgate_en_sig_13 | Driver_ADC0/Sampling_38400_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/psbram_and_n_2 |                5 |              8 |
+|  clk_10/inst/clk_out1                   | Driver_ADC0/Sampling_38400_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_REGCEB_cooolgate_en_sig_14 | Driver_ADC0/Sampling_38400_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/psbram_and_n_4 |                2 |              8 |
+|  clk_10/inst/clk_out1                   | Driver_ADC0/Sampling_38400_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_REGCEB_cooolgate_en_sig_17 | Driver_ADC0/Sampling_38400_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/psbram_and_n_1 |                4 |              8 |
+|  clk_10/inst/clk_out1                   | Driver_ADC0/Sampling_38400_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_REGCEB_cooolgate_en_sig_12 | Driver_ADC0/Sampling_38400_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/psbram_and_n_3 |                2 |              8 |
+|  clk_10/inst/clk_out1                   | Driver_ADC0/Sampling_38400_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_REGCEB_cooolgate_en_sig_15 | Driver_ADC0/Sampling_38400_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/psbram_and_n_8 |                3 |              8 |
+|  clk_10/inst/clk_out1                   | Driver_ADC0/Sampling_38400_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_REGCEB_cooolgate_en_sig_16 | Driver_ADC0/Sampling_38400_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/psbram_and_n_6 |                4 |              8 |
+|  clk_10/inst/clk_out1                   | Driver_ADC0/Sampling_38400_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_REGCEB_cooolgate_en_sig_20 | Driver_ADC0/Sampling_38400_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/psbram_and_n_5 |                3 |              8 |
+|  clk_10/inst/clk_out1                   | Driver_ADC0/Sampling_38400_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_REGCEB_cooolgate_en_sig_19 | Driver_ADC0/Sampling_38400_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/psbram_and_n_9 |                3 |              8 |
+|  clk_10/inst/clk_out1                   |                                                                                                                                                                                                               | rgb2dvi/U0/DataEncoders[0].DataEncoder/pDataOutRaw[9]_i_1__1_n_0                                                            |                3 |             10 |
+|  clk_10/inst/clk_out1                   | Driver_HDMI0/Set_X0_carry__0_n_2                                                                                                                                                                              |                                                                                                                             |                4 |             12 |
+|  clk_10/inst/clk_out1                   | Driver_HDMI0/Set_Y0_carry__0_n_2                                                                                                                                                                              |                                                                                                                             |                3 |             12 |
+|  clk_10/inst/clk_out1                   | Driver_HDMI0/VSync_Cnt0                                                                                                                                                                                       |                                                                                                                             |                3 |             12 |
+|  Signal_Pulse                           | Driver_ADC0/Freq_Cal0/Period[15]_i_1_n_0                                                                                                                                                                      |                                                                                                                             |                6 |             16 |
+|  Driver_ADC0/Clk_Division_ADC/Clk_reg_0 |                                                                                                                                                                                                               |                                                                                                                             |                3 |             16 |
+|  clk_10/inst/clk_out1                   |                                                                                                                                                                                                               | rgb2dvi/U0/DataEncoders[0].DataEncoder/SR[0]                                                                                |               15 |             32 |
+|  clk_10/inst/clk_out2                   |                                                                                                                                                                                                               | Driver_ADC0/Clk_Division_ADC/Count0                                                                                         |                8 |             32 |
+|  clk_10/inst/clk_out2                   |                                                                                                                                                                                                               |                                                                                                                             |               10 |             34 |
+|  Signal_Pulse                           | Driver_ADC0/Freq_Cal0/Measure_Num_Cnt[19]_i_1_n_0                                                                                                                                                             |                                                                                                                             |               13 |             52 |
+|  clk_10/inst/clk_out1                   |                                                                                                                                                                                                               |                                                                                                                             |               28 |             89 |
++-----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+
+
